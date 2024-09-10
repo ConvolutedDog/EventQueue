@@ -56,7 +56,7 @@ cp *.sh build/
 cd build
 #change LLVM_EXTERNAL_LIT and MLIR_DIR in run.sh to your local directory
 sh config; sh run.sh
-./bin/equeue-opt ../test/Equeue/[path-to-input-file.mlir]
+./bin/equeue-opt ../test/EQueue/[path-to-input-file.mlir]
 ```
 
 #### Debug Outputs
@@ -64,19 +64,19 @@ sh config; sh run.sh
 If one want to turn on debug outputs with `-debug` or `debug-only` when there are multiple debugging options
 
 ```shell
-./bin/equeue-opt ../test/Equeue/[path-to-input-file.mlir] -debug
+./bin/equeue-opt ../test/EQueue/[path-to-input-file.mlir] -debug
 # when there are multiple debugging options
-./bin/equeue-opt ../test/Equeue/[path-to-input-file.mlir] -debug-only=command_processor
+./bin/equeue-opt ../test/EQueue/[path-to-input-file.mlir] -debug-only=command_processor
 # to redirect output to file
-./bin/equeue-opt ../test/Equeue/[path-to-input-file.mlir] -debug > & report
+./bin/equeue-opt ../test/EQueue/[path-to-input-file.mlir] -debug > & report
 ```
 
 ### Visualization
 
-By default `equeue-opt` will generate a [Trace Event Format](https://docs.google.com/document/d/1CvAClvFfyA5R-PhYUmn5OOQtYMH4h6I0nSsKchNAySU/preview) JSON file to `test/Equeue/out.json` . You can specify the output file name with `-json` 
+By default `equeue-opt` will generate a [Trace Event Format](https://docs.google.com/document/d/1CvAClvFfyA5R-PhYUmn5OOQtYMH4h6I0nSsKchNAySU/preview) JSON file to `test/EQueue/out.json` . You can specify the output file name with `-json` 
 
 ```shell
-./bin/equeue-opt ../test/Equeue/[path-to-input-file.mlir] -json [path-to-json-file.json]
+./bin/equeue-opt ../test/EQueue/[path-to-input-file.mlir] -json [path-to-json-file.json]
 ```
 
 The output JSON file can be viewed in [chrome://tracing/](chrome://tracing/)  
